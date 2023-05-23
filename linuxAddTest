@@ -1,0 +1,9 @@
+#[#scriptContent#=#string##!/bin/bash
+operation=${operation}
+echo $operation
+route add -net ${destination_ip_address} netmask ${netmask} gw ${gateway_address}
+if [ $? != 0 ] && [ ${operation} == "Add" ]
+then
+        echo "Error occurred because route already exists"
+        exit 1
+fi#+#scriptTimeOut#=#number#60.0#+#scriptWorkingDirectory#=#string##+#scriptRefreshTime#=#number#5.0#+#deleteResourceAfterRun#=#boolean#true#+#scriptType#=#string#bash#+#resourceSearchReplace#=#boolean#false#+#scriptInteractiveSession#=#boolean#false#+#resourceToCopy#=#Any#Any#__NULL__#+#copyResource#=#boolean#false#]#

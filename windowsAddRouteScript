@@ -1,0 +1,24 @@
+#[#scriptContent#=#string#try
+{
+    #Inputs
+	$destinationMachineIp="[destinationip]"
+	$netmask="[netmask]"
+	$gatewayIp="[gatewayip]"
+	$operation="[operation]"
+	
+	$destinationMachineIp
+	$netmask
+	$gatewayIp
+	$operation
+
+	$result=route /p add $destinationMachineIp mask $netmask $gatewayIp
+	if($result -eq $null -AND $operation -eq "Add"){
+		"UNIQUEERRORCODE : Error occurred because the route already exists in the VM or some incorrect input being used for the route. $($_.Exception)"
+	} ElseIf($result -eq $null -AND $operation -eq "Delete"){
+		"UNIQUEERRORCODE : Error occurred because the route cannot be deleted as it does not exists in the VM $($_.Exception)"
+	}
+}
+catch
+{
+    "UNIQUEERRORCODE : Error occurred in the scripts $($_.Exception)"
+}#+#scriptTimeOut#=#number#60.0#+#scriptWorkingDirectory#=#string##+#scriptRefreshTime#=#number#5.0#+#deleteResourceAfterRun#=#boolean#true#+#scriptType#=#string#powershell#+#resourceSearchReplace#=#boolean#false#+#scriptInteractiveSession#=#boolean#false#+#resourceToCopy#=#Any#Any#__NULL__#+#copyResource#=#boolean#false#]#
