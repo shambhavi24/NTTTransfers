@@ -14,7 +14,7 @@ SAS:
 
 wget --header="Content-type: multipart/form-data boundary=FILEUPLOAD" --post-file postfile http://domain/uploadform
 
-
+https://gist.github.com/IISResetMe/cc61ead8b032aeed7818d49f874c26f6
 
 --------
 working one::
@@ -33,3 +33,12 @@ PROD:
 https://itaclariosprodstg.blob.core.windows.net/scripts/
 
 https://itaclariosprodstg.blob.core.windows.net/reports?sp=racwdli&st=2023-05-24T05:33:16Z&se=2026-12-31T14:00:00Z&sv=2022-11-02&sr=c&sig=ND4F4cRlqhOVOBZcnXkm21OkpOTYFOSInxi35YS6Ogc%3D
+
+
+Health Check for windows:
+
+Commands:
+powershell.exe -ExecutionPolicy Unrestricted -File installAzcopyWindows.ps1 azcopy_windows_amd64_10.18.1.zip && powershell.exe -ExecutionPolicy Unrestricted -File Health-Check-Win.ps1 > C:\temp\healthCheck_[[AttributeValue:DSO_REQUEST_ID]]_[[AttributeValue:PERFORM_HEALTH_CHECK_FOR_AZURE_VM_SERVER_LABEL]].txt && c:\azcopy\azcopy copy "C:\temp\healthCheck_[[AttributeValue:DSO_REQUEST_ID]]_[[AttributeValue:PERFORM_HEALTH_CHECK_FOR_AZURE_VM_SERVER_LABEL]].txt" "https://itaclariosprodstg.blob.core.windows.net/reports?sp=racwdli&st=2023-05-24T05:33:16Z&se=2026-12-31T14:00:00Z&sv=2022-11-02&sr=c&sig=ND4F4cRlqhOVOBZcnXkm21OkpOTYFOSInxi35YS6Ogc%3D" && del /f "C:\temp\healthCheck_[[AttributeValue:DSO_REQUEST_ID]]_[[AttributeValue:PERFORM_HEALTH_CHECK_FOR_AZURE_VM_SERVER_LABEL]].txt"
+
+URLS:
+https://itaclariosprodstg.blob.core.windows.net/scripts/installAzcopyWindows.ps1,https://itaclariosprodstg.blob.core.windows.net/scripts/azcopy_windows_amd64_10.18.1.zip,https://itaclariosprodstg.blob.core.windows.net/scripts/Health-Check-Win.ps1
