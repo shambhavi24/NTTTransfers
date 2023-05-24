@@ -1,0 +1,35 @@
+DefaultEndpointsProtocol=https;
+AccountName=difsinputdataadls;
+AccountKey=qKET7eJuUAboNDkUYoGahfNc7gn2wmkzd0cbvDYpcPTe3d5cAyEOQCrd/3sY6hSPnVQARHOqUNnfYl4K3tSmtQ==;
+EndpointSuffix=core.windows.net;
+
+421794ae-eea0-4420-ab1a-a70e1841652c
+
+Access key:
+v3ubGgouFWaQVBv8rPnXVgbxw99J2GPodEVTme34J49AYRuAAYSfW70B/FeM7si2nfk1McOkNV1I+AStsW2Ibg==
+https://clariostempstg.blob.core.windows.net/clarios-health-reports
+
+SAS:
+
+
+wget --header="Content-type: multipart/form-data boundary=FILEUPLOAD" --post-file postfile http://domain/uploadform
+
+
+
+--------
+working one::
+
+https://clariostempstg.blob.core.windows.net/clarios-health-reports?sp=racwdli&st=2023-04-25T13:37:54Z&se=2023-05-25T21:37:54Z&spr=https&sv=2021-12-02&sr=c&sig=ib%2BApo6ucNGoMDPntnMkuubNp6PJY2ZSZW8gf%2BLbfRk%3D
+
+-------
+
+v3ubGgouFWaQVBv8rPnXVgbxw99J2GPodEVTme34J49AYRuAAYSfW70B/FeM7si2nfk1McOkNV1I+AStsW2Ibg==
+
+C:\GoogleChromePortable\App\Chrome-bin\chrome.exe --headless --disable-gpu --print-to-pdf=C:\Downloads\test.pdf file:///C:/sourcefile.htm
+
+
+PROD:
+
+https://itaclariosprodstg.blob.core.windows.net/scripts/
+
+https://itaclariosprodstg.blob.core.windows.net/reports?sp=racwdli&st=2023-05-24T05:33:16Z&se=2026-12-31T14:00:00Z&sv=2022-11-02&sr=c&sig=ND4F4cRlqhOVOBZcnXkm21OkpOTYFOSInxi35YS6Ogc%3D
