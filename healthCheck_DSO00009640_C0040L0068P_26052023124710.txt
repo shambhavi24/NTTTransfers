@@ -1,0 +1,153 @@
+
+*******************************************************
+	System Health Status
+*******************************************************
+Hostname : c0040l0068p
+
+-------------------------------------------------------
+
+ System up time:
+-------------------------------------------------------
+Fri May 26 08:41:55 EDT 2023
+ 08:41:55 up 5 days,  8:17,  0 users,  load average: 0.32, 0.30, 0.29
+-------------------------------------------------------
+
+ System patch details:
+-------------------------------------------------------
+kernel-4.18.0-372.52.1.el8_6.x86_64           Sun 21 May 2023 12:18:50 AM EDT
+kernel-4.18.0-372.51.1.el8_6.x86_64           Sun 23 Apr 2023 12:45:35 AM EDT
+kernel-4.18.0-372.46.1.el8_6.x86_64           Sun 26 Mar 2023 12:54:43 AM EDT
+-------------------------------------------------------
+
+
+ Top CPU utilization:
+-------------------------------------------------------
+    PID    PPID CMD                         %CPU
+   1328       1 /usr/share/elasticsearch/jd 28.9
+   8517    8188 sidekiq 6.4.0 queues:author  4.2
+   2253    2250 s1-agent                     3.2
+1100525       1 /var/lib/waagent/Microsoft.  2.6
+   8174    8147 /opt/gitlab/embedded/bin/re  1.7
+   2257    2250 s1-perf                      1.6
+   1239       1 /usr/libexec/platform-pytho  1.5
+   8185    8157 /opt/gitlab/embedded/bin/no  0.9
+   8197    8158 /opt/gitlab/embedded/bin/ru  0.9
+-------------------------------------------------------
+Total Number of CPU/cores: 8
+CPU Usage: 23.6%
+-------------------------------------------------------
+Total Memory: 31.2056 GB
+Memory Usage: 63.4971%
+-------------------------------------------------------
+
+ Top MEM utilization:
+-------------------------------------------------------
+    PID    PPID CMD                         %MEM
+   1328       1 /usr/share/elasticsearch/jd 44.3
+ 990754    8172 puma: cluster worker 0: 817  2.2
+   8517    8188 sidekiq 6.4.0 queues:author  2.2
+ 990485    8172 puma: cluster worker 2: 817  2.2
+ 990310    8172 puma: cluster worker 5: 817  2.2
+ 991025    8172 puma: cluster worker 3: 817  2.2
+ 990618    8172 puma: cluster worker 4: 817  2.1
+ 990878    8172 puma: cluster worker 1: 817  2.1
+ 990122    8172 puma: cluster worker 7: 817  2.0
+-------------------------------------------------------
+
+ DISK usage on server:
+-------------------------------------------------------
+devtmpfs                           16G     0   16G   0% /dev
+Filesystem                        Size  Used Avail Use% Mounted on
+tmpfs                              16G     0   16G   0% /sys/fs/cgroup
+tmpfs                              16G   28K   16G   1% /dev/shm
+/dev/mapper/vgroot-lvopenv        5.0G   68M  5.0G   2% /usr/openv
+/dev/mapper/vgroot-lvswdepot       10G  104M  9.9G   2% /swdepot
+/dev/mapper/vgroot-root            10G  137M  9.9G   2% /
+/dev/mapper/vgroot-var_tmp        5.0G   70M  5.0G   2% /var/tmp
+tmpfs                              16G  237M   16G   2% /run
+/dev/mapper/vgroot-amagentlv      3.0G   62M  3.0G   3% /opt/amagent
+/dev/mapper/vgroot-tmp            3.0G   96M  3.0G   4% /tmp
+/dev/mapper/vgroot-lvmanagesoft   3.0G  134M  2.9G   5% /opt/managesoft
+/dev/mapper/vgroot-lvbmc          5.0G  370M  4.7G   8% /opt/bmc
+/dev/mapper/vgroot-lvsentinel     3.0G  334M  2.7G  11% /opt/sentinelone
+/dev/sda1                          63G  6.1G   54G  11% /mnt/resource
+/dev/mapper/vgroot-var_log_audit  3.0G  368M  2.7G  13% /var/log/audit
+/dev/mapper/vgroot-lvinsightvm   1014M  138M  877M  14% /opt/rapid7
+/dev/mapper/vgroot-var             50G  7.9G   43G  16% /var
+/dev/mapper/vgapp-lvapp          1000G  255G  745G  26% /app
+/dev/mapper/vgroot-var_log         10G  2.7G  7.4G  27% /var/log
+/dev/mapper/vgroot-opt             10G  2.9G  7.2G  29% /opt
+/dev/sdb1                        1014M  341M  674M  34% /boot
+/dev/mapper/vgroot-home            10G  5.3G  4.8G  53% /home
+/dev/mapper/vgroot-usr            6.0G  3.2G  2.9G  53% /usr
+--------------------------------------------------------------------------------------------------------------
+Process currently running on server:
+--------------------------------------------------------------------------------------------------------------
+  atd.service                        loaded active running Job spooling tools                                                           
+  auditd.service                     loaded active running Security Auditing Service                                                    
+  chronyd.service                    loaded active running NTP client/server                                                            
+  crond.service                      loaded active running Command Scheduler                                                            
+  dbus.service                       loaded active running D-Bus System Message Bus                                                     
+  elasticsearch.service              loaded active running Elasticsearch                                                                
+  getty@tty1.service                 loaded active running Getty on tty1                                                                
+  gitlab-runsvdir.service            loaded active running GitLab Runit supervision process                                             
+  goferd.service                     loaded active running Gofer Agent                                                                  
+  ir_agent.service                   loaded active running Rapid7 Insight Agent                                                         
+  irqbalance.service                 loaded active running irqbalance daemon                                                            
+  libstoragemgmt.service             loaded active running libstoragemgmt plug-in server daemon                                         
+  mcelog.service                     loaded active running Machine Check Exception Logging Daemon                                       
+  mgsusageag.service                 loaded active running LSB: ManageSoft mgsusageag agent                                             
+  ndtask.service                     loaded active running LSB: ManageSoft ndtask agent                                                 
+  NetworkManager.service             loaded active running Network Manager                                                              
+  nginx.service                      loaded active running nginx - high performance web server                                          
+  oddjobd.service                    loaded active running privileged operations for unprivileged applications                          
+  polkit.service                     loaded active running Authorization Manager                                                        
+  puppet.service                     loaded active running SYSV: Enables periodic system configuration checks through puppet.           
+  rhsmcertd.service                  loaded active running Enable periodic update of entitlement certificates.                          
+  rngd.service                       loaded active running Hardware RNG Entropy Gatherer Daemon                                         
+  rsyslog.service                    loaded active running System Logging Service                                                       
+  sentinelone.service                loaded active running Monitor SentinelOne Agent                                                    
+  serial-getty@ttyS0.service         loaded active running Serial Getty on ttyS0                                                        
+  smartd.service                     loaded active running Self Monitoring and Reporting Technology (SMART) Daemon                      
+  sshd.service                       loaded active running OpenSSH server daemon                                                        
+  sssd.service                       loaded active running System Security Services Daemon                                              
+  systemd-journald.service           loaded active running Journal Service                                                              
+  systemd-logind.service             loaded active running Login Service                                                                
+  systemd-udevd.service              loaded active running udev Kernel Device Manager                                                   
+  tuned.service                      loaded active running Dynamic System Tuning Daemon                                                 
+  waagent.service                    loaded active running Azure Linux Agent                                                            
+--------------------------------------------------------------------------------------------------------------
+Process failed on server:
+--------------------------------------------------------------------------------------------------------------
+● amagent.service                    loaded failed failed  Automox Agent                                                                
+--------------------------------------------------------------------------------------------------------------
+Network interface available on server:
+--------------------------------------------------------------------------------------------------------------
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.75.148.68  netmask 255.255.255.192  broadcast 10.75.148.127
+        ether 60:45:bd:bc:4c:06  txqueuelen 1000  (Ethernet)
+        RX packets 124326879  bytes 163690966172 (152.4 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 23810379  bytes 149131969825 (138.8 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 20374910  bytes 237182159155 (220.8 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 20374910  bytes 237182159155 (220.8 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+--------------------------------------------------------------------------------------------------------------
+Ping check report on server:
+--------------------------------------------------------------------------------------------------------------
+PING google.com (172.253.63.100) 56(84) bytes of data.
+no answer yet for icmp_seq=1
+no answer yet for icmp_seq=2
+no answer yet for icmp_seq=3
+no answer yet for icmp_seq=4
+
+--- google.com ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4090ms
+
+ --------Report end-------
