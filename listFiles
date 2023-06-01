@@ -1,4 +1,5 @@
-#[#scriptContent#=#string#<#$RootFolder = 'D:\'
+#[#scriptContent#=#string##Inputs
+<#$RootFolder = 'D:\'
 $path = "D:\Integrated_Delivery_Scripts_Test\"
 $filename = "\FilesAndFolders_"+"$(Get-Date -Format ddMMyyyyhhmmss).txt"
 #>
@@ -58,7 +59,7 @@ $Folders = Get-ChildItem -Path $RootFolder -ErrorAction SilentlyContinue -Force|
 $Folders = ,$RootFolder + $Folders
 
 $null = foreach( $Folder in $Folders ){
-    #$FolderSize = Get-ChildItem -Path $Folder -Recurse |
+    #$FolderSize = Get-ChildItem -Path $Folder -ErrorAction SilentlyContinue -Force  |
         #$FolderSize = Get-ChildItem -Path $Folder -Depth 1 -Recurse -ErrorAction SilentlyContinue -Force |
 		$FolderSize = Get-ChildItem -Path $Folder -Depth 1 -Recurse -ErrorAction SilentlyContinue -Force |
         Where-Object { -not $_.PSIsContainer } |
@@ -70,7 +71,7 @@ $null = foreach( $Folder in $Folders ){
     Size = Get-FormattedSize -Size $FolderSize
     } ))
 
-    $Files = Get-ChildItem -Path $Folder -ErrorAction SilentlyContinue -Force | Where-Object { -not $_.PSIsContainer } | sort-Object -property Length -Descending
+    $Files = Get-ChildItem -Path $Folder -ErrorAction SilentlyContinue -Force | Where-Object { -not $_.PSIsContainer } | sort-Object -property length -Descending
 
 
     foreach( $File in $Files ){
@@ -144,7 +145,7 @@ $null = foreach( $Folder in $Folders ){
     Size = Get-FormattedSize -Size $FolderSize
     } ))
 
-    $Files = Get-ChildItem -Path $Folder -ErrorAction SilentlyContinue -Force| Where-Object { -not $_.PSIsContainer } | sort-Object -property Length -Descending
+    $Files = Get-ChildItem -Path $Folder -ErrorAction SilentlyContinue -Force| Where-Object { -not $_.PSIsContainer } | sort-Object -property length -Descending
 
 
     foreach( $File in $Files ){
@@ -157,7 +158,8 @@ $null = foreach( $Folder in $Folders ){
     $Results.Add( '' )
     }
 
-$a = $Results | Select-Object -Property Path, Size | Sort-Object -Property Size -Descending
+$a = $Results |
+    Select-Object -Property Path, Size
 
 #Write-Host $a
 $outPath = $path+$filename
