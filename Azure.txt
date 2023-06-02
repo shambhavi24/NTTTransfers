@@ -1,3 +1,5 @@
+E08*9K49W*x%s(fd
+
 DefaultEndpointsProtocol=https;
 AccountName=difsinputdataadls;
 AccountKey=qKET7eJuUAboNDkUYoGahfNc7gn2wmkzd0cbvDYpcPTe3d5cAyEOQCrd/3sY6hSPnVQARHOqUNnfYl4K3tSmtQ==;
