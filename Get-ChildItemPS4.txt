@@ -1,0 +1,35 @@
+function Get-ChildItemDeep
+{
+  param(
+    [Parameter(ParameterSetName='Items', Position=0, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
+    [string[]]
+    ${Path},
+
+    [Parameter(Position=1)]
+    [string]
+    ${Filter},
+
+    [Parameter(Mandatory=$true)]
+    [int]
+    ${Depth}
+  )
+
+  # Make a copy of the params for `Get-ChildItem`
+  $GCIParams = @{}
+  foreach($ParamName in $PSBoundParameters.Keys.Where({$_ -ne 'Depth'})){
+    $GCIParams[$ParamName] = $PSBoundParameters[$ParamName]
+  }
+
+  # Decrease depth for next call
+  $PSBoundParameters['Depth']--
+
+  # Call Get-ChildItem
+  Get-ChildItem @GCIParams |ForEach-Object {
+    $_
+    # Recurse if appropriate
+    if($_.PSIsContainer -and $Depth -gt 1){
+      $PSBoundParameters['Path'] = $_.FullName
+      Get-ChildItemDeep @PSBoundParameters
+    }
+  }
+}
