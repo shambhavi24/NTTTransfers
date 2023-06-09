@@ -1,0 +1,46 @@
+
+Name                                                           Version     Vend
+                                                                           or  
+----                                                           -------     ----
+Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.20.27508    14.20.27508 Micr
+                                                                           osof
+                                                                           t Co
+                                                                           rpor
+                                                                           atio
+                                                                           n   
+Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.20.27508    14.20.27508 Micr
+                                                                           osof
+                                                                           t Co
+                                                                           rpor
+                                                                           atio
+                                                                           n   
+Puppet Agent (64-bit)                                          6.8.1       Pupp
+                                                                           et  
+                                                                           Inc 
+Microsoft Visual C++ 2019 X86 Additional Runtime - 14.20.27508 14.20.27508 Micr
+                                                                           osof
+                                                                           t Co
+                                                                           rpor
+                                                                           atio
+                                                                           n   
+UniversalForwarder                                             7.2.9.1     Splu
+                                                                           nk, 
+                                                                           Inc.
+FlexNet Inventory Agent                                        14.00.52    Flex
+                                                                           era 
+                                                                           Soft
+                                                                           ware
+                                                                            LLC
+Microsoft Visual C++ 2019 X64 Additional Runtime - 14.20.27508 14.20.27508 Micr
+                                                                           osof
+                                                                           t Co
+                                                                           rpor
+                                                                           atio
+                                                                           n   
+Automox Agent                                                  1.0.28      Auto
+                                                                           mox 
+Rapid7 Insight Agent                                           3.1.12.1    Rapi
+                                                                           d7, 
+                                                                           Inc.
+
+
